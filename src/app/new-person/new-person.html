@@ -1,7 +1,31 @@
-<p>
-    New Person
-</p>
-
 <section>
-    
+    <h2>Create New Person</h2>
+    <form [formGroup]="personForm">
+        
+        <mat-form-field>
+            <mat-label for="firstname">First Name</mat-label>
+            <input matInput id="firstname" formControlName="firstName" placeholder="Enter first name">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label for="lastname">Last Name</mat-label>
+            <input matInput id="lastname" formControlName="lastName" placeholder="Enter last name">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label for="age">Age</mat-label>
+            <input matInput id="age" formControlName="age" placeholder="Enter age">
+        </mat-form-field>
+        <button mat-button (click)="saveNewPerson()">Create</button>
+    </form>
 </section>
+
+<div>
+    <h2>Anrede</h2>
+    <mat-form-field>
+        <mat-label>Anrede</mat-label>
+        <mat-select [(value)]="selectedAnrede">
+            @for (anrede of ['Frau', 'Herr', 'Divers']; track anrede) {
+                <mat-option [value]="anrede">{{anrede}}</mat-option>
+            }
+        </mat-select>
+    </mat-form-field>
+</div>

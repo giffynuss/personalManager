@@ -54,6 +54,11 @@ export class Personservice {
     );
   }
 
+
+  addPerson(newPerson: { id: number; firstname: any; lastname: any; age: any; anrede: string; }) {
+    this.persons.push(newPerson);
+  }
+
   /* .filter(p => p.lastname.toLowerCase().includes(ln.toLowerCase())) */
   
 }

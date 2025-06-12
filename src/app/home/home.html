@@ -1,0 +1,28 @@
+
+<!--
+<div>
+    <li>Timo Müller</li>
+    <li>Sara Karl</li>
+    <li>Daniel Hübscher</li>
+    <li>Lisa Sandon</li>
+</div>-->
+<!--
+<div **ngFor="let item of ['Timo Müller', 'Sara Karl', 'Daniel Hübscher', 'Lisa Sandon']">
+    <li>{{item}}</li>
+
+</div>-->
+
+<section>
+    <input placeholder="Filter by lastname" #ln>
+    <button mat-button (click)="getPersonByLastname(ln.value)">Filter</button>
+</section>
+
+
+@for (person of persons; track $index) {
+    <app-overview [person]="person"></app-overview>
+}
+<div>   
+    <a [routerLink]="['/new-person']">
+        <button mat-button color="primary">New Person</button>
+    </a>
+</div>

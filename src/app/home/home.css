@@ -1,0 +1,16 @@
+.myCard{
+    max-width: 600px;
+    max-height: 400px;
+    background-color:indianred;
+    color: black;
+    margin: auto;
+    margin-top: 25px;
+}
+
+.black{
+    color: black;
+}
+
+.blue{
+    color: rgb(0, 0, 255);
+}

@@ -1,0 +1,22 @@
+
+<div>
+    <mat-card class="myCard">
+    <mat-card-header>
+        <div mat-card-avatar>
+            <img src={{person.photo}} alt="Logo" width="50" height="50">
+        </div>
+        {{person.age}} years old
+        <mat-card-title>
+            {{person.id}}. {{person.firstname}} {{person.lastname}}
+        </mat-card-title>
+        <mat-card-subtitle class="black">
+            Beschreibung . . . 
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions>
+        <button mat-button (click)="home.getPersonInfo(person.id)">GRRRRRRRRRR</button>
+        <a [routerLink]="['/details', person.id]">AHSHASHAHSHAHHAAHHAAH</a>
+    </mat-card-actions>
+    </mat-card>
+    
+</div>

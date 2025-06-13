@@ -7,6 +7,7 @@ import { Person } from './person';
 export class Personservice {
 
   persons: Person[] = []
+  url = "http://localhost:3000/persons";
 
   constructor(){
     this.persons = [
@@ -21,18 +22,26 @@ export class Personservice {
     return this.persons;
   }
 
+  // HTTP-Call get persons
+  async getPersonHTTP(): Promise<Person[]> {
+    const data = await fetch(this.url);
+    return (await data.json()) ?? [ {id: 9999, firstname: 'ERROR', lastname: 'ERROR', age: -1, photo: 'pic2.jpg'} ];
+  }
+
+
+
   /* getPersonById(id: Number): Person | undefined {
     return this.persons.find(element => element.id == id);
   } */
 
-    getPersonById(id: Number): Person[] {
-      if(id == null || id == undefined){
-        return [this.getPersons()[0]];
-      }
-      return this.persons.filter(element => 
-        element.id == id
-      );
+  getPersonById(id: Number): Person[] {
+    if(id == null || id == undefined){
+      return [this.getPersons()[0]];
     }
+    return this.persons.filter(element => 
+      element.id == id
+    );
+  }
 
   /* getPersonById(id: Number): Person | any {
     this.persons.forEach(

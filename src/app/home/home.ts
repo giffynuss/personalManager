@@ -20,7 +20,9 @@ export class Home {
   person: Person | undefined = undefined;
 
   constructor(){
-    this.persons = this.personService.getPersons();
+    this.personService.getPersonHTTP().then((personList: Person[]) => {
+      this.persons = personList;
+    });
   }
 
   getPersonInfo(id: Number){

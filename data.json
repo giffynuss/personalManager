@@ -1,0 +1,46 @@
+{
+    "persons":[
+        {
+            "id": "0",
+            "firstname": "Timo",
+            "lastname": "Müller",
+            "photo": "images.jpg"
+        },
+        {
+            "id": "1",
+            "firstname": "Max",
+            "lastname": "Mustermann",
+            "photo": "pic1.jpg"
+        },
+        {
+            "id": "2",
+            "firstname": "Erika",
+            "lastname": "Mustermann",
+            "photo": "pic2.jpg"
+        },
+        {
+            "id": "3",
+            "firstname": "John",
+            "lastname": "Doe",
+            "photo": "pic3.jpg"
+        },
+        {
+            "id": "4",
+            "firstname": "Jane",
+            "lastname": "Doe",
+            "photo": "pic4.jpg"
+        },
+        {
+            "id": "5",
+            "firstname": "Alice",
+            "lastname": "Smith",
+            "photo": "pic5.jpg"
+        },
+        {
+            "id": "6",
+            "firstname": "Bob",
+            "lastname": "Johnson",
+            "photo": "pic6.jpg"
+        }
+    ]
+}
